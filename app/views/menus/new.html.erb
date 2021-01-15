@@ -1,0 +1,59 @@
+<div class="sinki">
+<h3>投稿ページ</h3>
+ <p>下のメニューを選んでください</p>
+    <%= form_with(model: @menu, local: true) do |f| %>
+    
+      <%= render 'shared/error_messages', model: f.object %>
+       <%#日曜日%>
+       <div class="selects">
+      <%= f.collection_select(:sokuseki_id, Sokuseki.all, :id, :name, {}, {class:"genre-select"}) %>
+      <div class="selects-text">
+      <%= f.text_area :sun_making, placeholder: "手料理ならレシピ記入蘭", rows: "2" %></div>
+      </div>
+    
+
+      <%#月曜日%>
+       <div class="selects">
+      <%= f.collection_select(:sokuseki_mon_id, SokusekiMon.all, :id, :name, {}, {class:"genre-select"}) %>
+      <div class="selects-text">
+      <%= f.text_area :mon_making, placeholder: "手料理ならレシピ記入蘭", rows: "2" %></div>
+      </div>
+
+      <%#火曜日%>
+       <div class="selects">
+      <%= f.collection_select(:sokuseki_tue_id, SokusekiTue.all, :id, :name, {}, {class:"genre-select"}) %>
+      <div class="selects-text">
+      <%= f.text_area :tue_making, placeholder: "手料理ならレシピ記入蘭", rows: "2" %></div>
+      </div>
+
+      <%#水曜日%>
+       <div class="selects">
+      <%= f.collection_select(:sokuseki_wed_id, SokusekiWed.all, :id, :name, {}, {class:"genre-select"}) %>
+      <div class="selects-text">
+      <%= f.text_area :wed_making, placeholder: "手料理ならレシピ記入蘭", rows: "2" %></div>
+      </div>
+     
+      <%#木曜日%>
+       <div class="selects">
+      <%= f.collection_select(:sokuseki_thu_id, SokusekiThu.all, :id, :name, {}, {class:"genre-select"}) %>
+      <div class="selects-text">
+      <%= f.text_area :thu_making, placeholder: "手料理ならレシピ記入蘭", rows: "2" %></div>
+      </div>
+
+      <%#金曜日%>
+       <div class="selects">
+      <%= f.collection_select(:sokuseki_fri_id, SokusekiFri.all, :id, :name, {}, {class:"genre-select"}) %>
+      <div class="selects-text">
+      <%= f.text_area :fri_making, placeholder: "手料理ならレシピ記入蘭", rows: "2" %></div>
+      </div>
+      
+      <%#土曜日%>
+       <div class="selects">
+      <%= f.collection_select(:sokuseki_sat_id, SokusekiSat.all, :id, :name, {}, {class:"genre-select"}) %>
+      <div class="selects-text">
+      <%= f.text_area :sat_making, placeholder: "手料理ならレシピ記入蘭", rows: "2" %></div>
+      </div>
+
+      <%= f.submit "SEND" ,class: :sends %>
+    <% end %>
+  </div>   

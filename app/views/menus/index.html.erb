@@ -1,0 +1,51 @@
+<div class="contents">
+<div class="taito"><h1>今週のメニューはこちら</h1></div>
+<div class="kondate">
+  <% @menus.each do |menu| %>
+    <div class=user_name>
+     <a href="/users/<%= menu.user.id %>"><%="#{menu.user.name}さん"%></a>
+    </div> 
+    <div class="week">
+        <div class="week-menu">
+          <p>日曜日</p>
+          <hr>
+          <div class="week-resipi"><%= menu.sokuseki.name %></div>
+        </div> 
+        <div class="week-menu">
+          <p>月曜日</p>
+          <hr>
+          <div class="week-resipi"><%= menu.sokuseki_mon.name %></div>
+        </div>
+
+        <div class="week-menu">
+          <p>火曜日</p>
+          <hr>
+          <div class="week-resipi"><%= menu.sokuseki_tue.name %></div>
+        </div>
+
+        <div class="week-menu">
+           <p>水曜日</p>
+           <hr>
+           <div class="week-resipi"><%= menu.sokuseki_wed.name %></div>
+        </div>
+
+        <div class="week-menu">
+          <p>木曜日</p>
+          <hr>
+          <div class="week-resipi"><%= menu.sokuseki_thu.name %></div>
+        </div>
+        <div class="week-menu">
+          <p>金曜日</p>
+          <hr>
+          <div class="week-resipi"><%= menu.sokuseki_fri.name %></div>
+        </div>
+
+        <div class="week-menu">
+           <p>土曜日</p>
+           <hr>
+           <div class="week-resipi"><%= menu.sokuseki_sat.name %></div>
+        </div>
+    </div>
+  <% end %>
+  </div>
+</div>

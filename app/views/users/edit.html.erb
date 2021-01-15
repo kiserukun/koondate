@@ -1,0 +1,34 @@
+<div class="container">
+    <h3>編集する</h3>
+      <%= form_with(model: @menu, local: true) do |f| %>
+
+       <%#日曜日%>
+      <p><%= f.collection_select(:sokuseki_id, Sokuseki.all, :id, :name, {}, {class:"genre-select"}) %>
+      <%= f.text_area :sun_making, placeholder: "text", rows: "2" %></p>
+
+      <%#月曜日%>
+      <p><%= f.collection_select(:sokuseki_mon_id, Sokuseki.all, :id, :name, {}, {class:"genre-select"}) %>
+      <%= f.text_area :mon_making, placeholder: "text", rows: "2" %></p>
+
+      <%#火曜日%>
+      <p><%= f.collection_select(:sokuseki_tue_id, Sokuseki.all, :id, :name, {}, {class:"genre-select"}) %>
+      <%= f.text_area :tue_making, placeholder: "text", rows: "2" %></p>
+
+      <%#水曜日%>
+      <p><%= f.collection_select(:sokuseki_wed_id, Sokuseki.all, :id, :name, {}, {class:"genre-select"}) %>
+      <%= f.text_area :wed_making, placeholder: "text", rows: "2" %></p>
+     
+      <%#木曜日%>
+      <p><%= f.collection_select(:sokuseki_thu_id, Sokuseki.all, :id, :name, {}, {class:"genre-select"}) %>
+      <%= f.text_area :thu_making, placeholder: "text", rows: "2" %></p>
+
+      <%#金曜日%>
+      <p><%= f.collection_select(:sokuseki_fri_id, Sokuseki.all, :id, :name, {}, {class:"genre-select"}) %>
+      <%= f.text_area :fri_making, placeholder: "text", rows: "2" %></p>
+
+      <%#土曜日%>
+      <p><%= f.collection_select(:sokuseki_sat_id, Sokuseki.all, :id, :name, {}, {class:"genre-select"}) %>
+      <%= f.text_area :sat_making, placeholder: "text", rows: "2" %></p>
+      <%= f.submit "SEND" %>
+    <% end %>
+  </div>

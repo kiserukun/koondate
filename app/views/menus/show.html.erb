@@ -1,0 +1,61 @@
+   <div class="more_list">
+          <%= link_to '編集', edit_menu_path(@menu.id),method: :get %>
+      
+          <%= link_to '削除', user_path(@menu.id),method: :delete %>
+      </div>
+    <span class="name"><%= @name %>さん</span>
+    <div class="kondate">
+  <% @menus.each do |menu| %>
+    
+     <p><%= link_to "#{menu.user.name}さん", "/users/#{current_user.id}", method: :get %></p>
+    
+    <div class="week">
+        <div class="week-menu">
+          <p>日曜日</p>
+          <hr>
+          <%= menu.sokuseki.name %>
+          <p><%= menu.sun_making %></p>
+        </div> 
+        <div class="week-menu">
+          <p>月曜日</p>
+          <hr>
+          <%= menu.sokuseki_mon.name %>
+          <p><%= menu.mon_making %></p>
+        </div>
+
+        <div class="week-menu">
+          <p>火曜日</p>
+          <hr>
+          <%= menu.sokuseki_tue.name %>
+          <p><%= menu.tue_making %></p>
+        </div>
+
+        <div class="week-menu">
+           <p>水曜日</p>
+           <hr>
+          <%= menu.sokuseki_wed.name %>
+           <p><%= menu.wed_making %></p>
+        </div>
+
+        <div class="week-menu">
+          <p>木曜日</p>
+          <hr>
+          <%= menu.sokuseki_thu.name %>
+          <p><%= menu.thu_making %></p>
+        </div>
+        <div class="week-menu">
+          <p>金曜日</p>
+          <hr>
+          <%= menu.sokuseki_fri.name %>
+          <p><%= menu.fri_making %></p>
+        </div>
+
+        <div class="week-menu">
+           <p>土曜日</p>
+           <hr>
+           <%= menu.sokuseki_sat.name %>
+           <p><%= menu.sat_making %></p>
+        </div>
+    </div>
+  <% end %>
+  </div>

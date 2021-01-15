@@ -1,0 +1,108 @@
+.row{
+  background-color: ghostwhite;
+  padding: 20px;
+}
+.col{
+  text-align: center;
+  font-size: 25px;
+}
+.col a{
+  text-decoration: none;
+}
+.user__info{
+  float: right;
+}
+.taito h1{
+  padding: 10px;
+  font-size: 20px;
+  color: blue
+}
+.week{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0 30px 0;
+}
+.week-menu{
+  padding: 0 20px;
+  width: calc((100% - 50px) / 7);
+  border: 1px solid black;
+}
+
+.cooking{
+  Word-break:break-all;
+}
+.week-resipi{
+  text-align: center;
+  padding: 5px 0 10px 0;
+}
+.week-menu p{
+  text-align: center;
+  padding-top: 10px;
+}
+.kondate{
+  margin: 0 20px;
+}
+
+.sinki{
+  padding: 20px;
+}
+.name{
+  padding: 20px;
+}
+.more_list{
+  margin: 10px;
+}
+.sends{
+  margin-top: 10px;
+  padding: 15px 40px;
+}
+.selects{
+  display: flex;
+  justify-content: left;
+  margin: 10px 0 ;
+}
+.genre-select{
+  padding: 15px 40px;
+  cursor: pointer;
+
+}
+
+.selects-text{
+  position: relative;
+  margin-left: 20px;
+}
+
+
+
+.btn-border {
+  display: inline-block;
+  max-width: 180px;
+  text-align: left;
+  border: 2px solid #9ec34b;
+  font-size: 16px;
+  color: #9ec34b;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: .4s;
+}
+
+.btn-border:hover {
+  background-color: #9ec34b;
+  border-color: #cbe585;
+  color: #FFF;
+}
+.error-message{
+  color: red;
+}
+
+.sign-up{
+  padding: 10px 0 0 20px;
+}
+.actions{
+  margin: 15px 0 15px 0;
+}
+.log-in{
+  padding: 10px 0 0 20px;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kondate</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+  
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+  </head>
+
+  <body>
+    <header>
+        <div class="row">
+          <div class="col">
+             <h1><%= image_tag "image.jpg", class:"list-pict" ,size: '50x50'%>
+             <a href="/">KONDATE</a>
+             <%= image_tag "image.jpg", class:"list-pict" ,size: '50x50'%></h1>
+          </div>
+          <% if user_signed_in? %>
+          
+            <div class="user__info">
+              <a>
+                <%= link_to "マイページ", "/users/#{current_user.id}" ,class: "btn-border"%></a>
+              <a>  <%= link_to "ログアウト", destroy_user_session_path, method: :delete,class: "btn-border" %>
+              </a>
+            </div>
+            <%= link_to "投稿する", new_menu_path, class: "btn-border" %>
+          </div>
+        <% else %>
+          <div class="grid-6">
+            <%= link_to "ログイン", new_user_session_path, class: "btn-border" %>
+            <%= link_to "新規登録", new_user_registration_path, class: "btn-border" %>
+              <%= link_to 'テストユーザー', users_guest_sign_in_path, method: :post ,class: "btn-border"%>
+          </div>
+        <% end %>
+        </div>
+    </header>
+    <%= yield %>
+
+    <footer>
+    </footer>
+  </body>
+</html>

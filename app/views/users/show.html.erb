@@ -1,0 +1,72 @@
+  
+    <div class="name"><%= @name %>さん</div>
+    <div class="kondate">
+  <% @menus.each do |menu| %>
+     <% if user_signed_in? && current_user.id == menu.user_id %>
+     <%unless @name === 'test'%>
+      <div class="more_list">
+          <%= link_to '編集', edit_user_path(menu.id),method: :get ,class: :edit_list %>
+      
+          <%= link_to '削除', user_path(menu.id),method: :delete, class: :edit_list %>
+      </div>
+      <% end %>
+      <% end %>
+    
+    <div class="week">
+        <div class="week-menu">
+          <p>日曜日</p>
+          <hr>
+          <%= menu.sokuseki.name %>
+          <hr>
+          <div class="cooking"><%= menu.sun_making %></div>
+        </div> 
+        <div class="week-menu">
+          <p>月曜日</p>
+          <hr>
+          <%= menu.sokuseki_mon.name %>
+          <hr>
+          <div class="cooking"><%= menu.mon_making %></div>
+        </div>
+
+        <div class="week-menu">
+          <p>火曜日</p>
+          <hr>
+          <%= menu.sokuseki_tue.name %>
+          <hr>
+          <div class="cooking"><%= menu.tue_making %></div>
+        </div>
+
+        <div class="week-menu">
+           <p>水曜日</p>
+           <hr>
+           <%= menu.sokuseki_wed.name %>
+           <hr>
+           <div class="cooking"><%= menu.wed_making %></div>
+        </div>
+
+        <div class="week-menu">
+          <p>木曜日</p>
+          <hr>
+          <%= menu.sokuseki_thu.name %>
+          <hr>
+          <div class="cooking"><%= menu.thu_making %></div>
+        </div>
+        <div class="week-menu">
+          <p>金曜日</p>
+          <hr>
+          <%= menu.sokuseki_fri.name %>
+          <hr>
+          <div class="cooking"><%= menu.fri_making %></div>
+        </div>
+
+        <div class="week-menu">
+           <p>土曜日</p>
+           <hr>
+           <%= menu.sokuseki_sat.name %>
+           <hr>
+           <div class="cooking"><%= menu.sat_making %></div>
+        </div>
+    </div>
+  <% end %>
+  </div>
+    
