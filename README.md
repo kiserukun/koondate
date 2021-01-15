@@ -8,6 +8,9 @@
 # 実装予定の機能：レシピ項目に画像を張れるようにしたいです。
 # データベース設計:ER.dioに記載しています。
 
+#以下は投稿の動画です。
+#https://i.gyazo.com/fdffaf3ebda413417031dbcec12dbf1a.gif
+#https://i.gyazo.com/4b50d6475c83518741040ddcb2bbeb6f.gif
 
 # テーブル設計
 
