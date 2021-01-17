@@ -1,3 +1,7 @@
+# KONDATE
+
+![logo-2](https://user-images.githubusercontent.com/73691576/104814693-b6f56f00-5853-11eb-8ff2-3e54fd372f56.png)
+
 # 概要
 
 https://koondate.herokuapp.com
